@@ -39,5 +39,4 @@ public final class PlayerListener implements Listener {
         optional.ifPresent(event::setSpawnLocation);
     }
 
-
 }
