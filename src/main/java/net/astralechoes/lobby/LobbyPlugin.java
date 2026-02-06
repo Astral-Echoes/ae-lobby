@@ -23,6 +23,8 @@ public final class LobbyPlugin extends JavaPlugin {
         // Plugin startup logic
         this.miniMessage = MiniMessage.miniMessage();
 
+        this.configController.initialize();
+
         new PlayerListener(this).register();
     }
 

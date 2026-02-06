@@ -1,6 +1,3 @@
-import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
-import net.minecrell.pluginyml.paper.PaperPluginDescription
-
 plugins {
     id("java")
     id("com.gradleup.shadow") version "9.3.0"

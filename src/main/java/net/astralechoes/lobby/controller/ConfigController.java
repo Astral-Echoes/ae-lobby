@@ -1,6 +1,7 @@
 package net.astralechoes.lobby.controller;
 
 import lombok.RequiredArgsConstructor;
+import net.astralechoes.lobby.Constants;
 import net.astralechoes.lobby.LobbyPlugin;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextDecoration;
@@ -31,6 +32,12 @@ public final class ConfigController {
 
     private CommentedConfigurationNode primaryNode;
     private CommentedConfigurationNode messagesNode;
+
+    // Initializes the controller
+    public void initialize() {
+        this.primaryNode = this.createNode(Constants.CONFIG_PRIMARY);
+        this.messagesNode = this.createNode(Constants.CONFIG_MESSAGES);
+    }
 
     // Gets a HoconConfigurationLoader for the given file path
     private HoconConfigurationLoader getHoconConfigurationLoader(final Path path) {
